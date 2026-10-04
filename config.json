@@ -1,0 +1,88 @@
+{
+  "program": "دقيقة عقار",
+  "timezone": "Asia/Riyadh",
+  "max_duration_sec": 60,
+  "target_duration_sec": 57,
+  "outro_voice": "كانت هذه دقيقة عقار. نلقاكم غدًا بمعلومة عقارية جديدة.",
+  "disclaimer": "معلومة عامة لا تُغني عن الاستشارة النظامية المتخصصة",
+  "ai_label": "محتوى مُنشأ بالذكاء الاصطناعي",
+  "voice": {
+    "engine": "edge",
+    "edge_voice": "ar-SA-HamedNeural",
+    "rate": "-2%",
+    "pitch": "-2Hz",
+    "max_rate_pct": 12
+  },
+  "gemini": {
+    "api_key_env": "GEMINI_API_KEY",
+    "veo_model": "veo-3.1-fast-generate-preview",
+    "clips_wanted": 6,
+    "aspect_ratio": "9:16"
+  },
+  "buffer": {
+    "organization_id": "6a815081358dd6921c9dd995",
+    "plan_scheduled_limit": 10,
+    "channels": {
+      "tiktok": {
+        "id": "6ac2525f6a5c39ccb60fd271",
+        "name": "@daqiqa_aqar",
+        "time": "19:30"
+      }
+    },
+    "live": true
+  },
+  "official_source_domains": [
+    "gov.sa",
+    "rega.gov.sa",
+    "ejar.sa",
+    "zatca.gov.sa",
+    "momah.gov.sa",
+    "boe.gov.sa",
+    "moj.gov.sa",
+    "sakani.sa",
+    "wafi.gov.sa",
+    "spa.gov.sa",
+    "my.gov.sa",
+    "najiz.sa",
+    "srem.moj.gov.sa",
+    "rer.sa",
+    "eservices.rega.gov.sa",
+    "wl.momah.gov.sa",
+    "balady.gov.sa",
+    "housing.gov.sa",
+    "mlsd.gov.sa",
+    "rerc.sa",
+    "rega.sa"
+  ],
+  "banned_phrases": [
+    "مضمون",
+    "مضمونة",
+    "ربح مؤكد",
+    "أرباح مؤكدة",
+    "أفضل استثمار",
+    "اشتر الآن",
+    "اشترِ الآن",
+    "فرصة لا تعوض",
+    "لا تفوت",
+    "بدون مخاطر",
+    "خالٍ من المخاطر",
+    "خال من المخاطر",
+    "نضمن",
+    "عائد مضمون",
+    "سارع",
+    "ننصحك بشراء",
+    "ننصحك ببيع",
+    "الأسعار سترتفع",
+    "الأسعار ستنخفض"
+  ],
+  "style": {
+    "bg_top": "#0E2A3B",
+    "bg_bottom": "#06141D",
+    "gold": "#D4A84B",
+    "gold_soft": "#F1D9A0",
+    "teal": "#2BB3A3",
+    "white": "#FFFFFF",
+    "card_bg": "#F6F1E6",
+    "card_text": "#0E2A3B"
+  }
+}

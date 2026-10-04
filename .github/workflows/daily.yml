@@ -1,0 +1,43 @@
+name: daily
+# 07:30 Asia/Riyadh = 04:30 UTC. Also runnable by hand from the Actions tab.
+on:
+  schedule:
+    - cron: "30 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      GH_TOKEN: ${{ github.token }}
+      AQAR_VIDEOS_DIR: out
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Ensure public video release exists
+        run: gh release view videos >/dev/null 2>&1 || gh release create videos --title "videos" --notes "Rendered episodes (public URLs used by Buffer)"
+      - name: Daily pipeline
+        id: pipeline
+        run: python engine/cloud.py
+      - name: Save state, logs and report
+        if: always()
+        run: |
+          git config user.name "daqiqa-aqar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add state.json logs reports dashboard.html
+          git diff --cached --quiet || git commit -m "daily run $(date -u +%F)"
+          git push

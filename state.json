@@ -1,0 +1,44 @@
+{
+  "episodes": {
+    "1": {
+      "status": "مجدول",
+      "video_file": "aqar_01_riyadh-rent-freeze.mp4",
+      "duration_sec": 55.94,
+      "voice_rate": -2,
+      "presenter": "clip_01.mp4",
+      "warnings": [],
+      "error": null,
+      "produced_at": "2026-10-04T13:46:19+00:00",
+      "updated_at": "2026-10-04T13:50:44+00:00",
+      "drive_id": "1GNUG2OXbyhwKi6Dugm5s0CyspvPB34Xt",
+      "posts": {
+        "tiktok": {
+          "post_id": "6ac259ab365aeab50be4a71f",
+          "due": "2026-10-05T16:30:00Z"
+        }
+      }
+    },
+    "2": {
+      "status": "منتج",
+      "video_file": "aqar_02_lease-auto-renewal.mp4",
+      "duration_sec": 48.96,
+      "voice_rate": -2,
+      "presenter": "clip_01.mp4",
+      "warnings": [],
+      "error": null,
+      "produced_at": "2026-10-04T13:48:09+00:00",
+      "updated_at": "2026-10-04T13:48:09+00:00"
+    },
+    "3": {
+      "status": "منتج",
+      "video_file": "aqar_03_brokerage-commission.mp4",
+      "duration_sec": 49.16,
+      "voice_rate": -2,
+      "presenter": "clip_01.mp4",
+      "warnings": [],
+      "error": null,
+      "produced_at": "2026-10-04T13:49:56+00:00",
+      "updated_at": "2026-10-04T13:49:56+00:00"
+    }
+  }
+}
