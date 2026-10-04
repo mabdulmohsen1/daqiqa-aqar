@@ -27,8 +27,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T15:37:21+00:00",
-      "updated_at": "2026-10-04T15:37:23+00:00",
-      "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_02_lease-auto-renewal.mp4"
+      "updated_at": "2026-10-04T15:37:23+00:00"
     },
     "3": {
       "status": "منتج",
@@ -39,8 +38,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T15:37:58+00:00",
-      "updated_at": "2026-10-04T15:38:00+00:00",
-      "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_03_brokerage-commission.mp4"
+      "updated_at": "2026-10-04T15:38:00+00:00"
     }
   }
 }

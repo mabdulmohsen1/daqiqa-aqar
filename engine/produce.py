@@ -56,7 +56,9 @@ _fonts, _CMAP = {}, set(TTFont(FONT).getBestCmap())
 
 def font(size, weight="Bold"):
     if (size, weight) not in _fonts:
-        f = ImageFont.truetype(FONT, size)
+        # BASIC layout: text is already shaped + visually ordered by shape(); Pillow builds with
+        # libraqm (e.g. Linux runners) would otherwise reorder it a second time and reverse it.
+        f = ImageFont.truetype(FONT, size, layout_engine=ImageFont.Layout.BASIC)
         f.set_variation_by_name(weight)
         _fonts[(size, weight)] = f
     return _fonts[(size, weight)]
