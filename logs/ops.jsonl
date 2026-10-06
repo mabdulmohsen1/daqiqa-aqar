@@ -15,3 +15,6 @@
 {"at": "2026-10-04T15:41:13+00:00", "event": "produced", "id": 3, "file": "aqar_03_brokerage-commission.mp4", "duration": 49.16, "presenter": "clip_01.mp4"}
 {"at": "2026-10-04T15:41:15+00:00", "event": "uploaded", "id": 3, "url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_03_brokerage-commission.mp4"}
 {"at": "2026-10-05T11:42:25+00:00", "event": "scheduled", "id": 2, "channel": "tiktok", "post_id": "6ac38d210cd800576d400f78", "due": "2026-10-06T19:30:00+03:00"}
+{"at": "2026-10-06T11:25:02+00:00", "event": "produced", "id": 4, "file": "aqar_04_first-home-tax.mp4", "duration": 51.12, "presenter": "clip_01.mp4"}
+{"at": "2026-10-06T11:25:03+00:00", "event": "uploaded", "id": 4, "url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_04_first-home-tax.mp4"}
+{"at": "2026-10-06T11:25:04+00:00", "event": "scheduled", "id": 3, "channel": "tiktok", "post_id": "6ac4da9010ae9c4df7ff07aa", "due": "2026-10-07T19:30:00+03:00"}

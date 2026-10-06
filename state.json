@@ -1,7 +1,7 @@
 {
   "episodes": {
     "1": {
-      "status": "مجدول",
+      "status": "منشور",
       "video_file": "aqar_01_riyadh-rent-freeze.mp4",
       "duration_sec": 55.94,
       "voice_rate": -2,
@@ -9,12 +9,20 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T13:46:19+00:00",
-      "updated_at": "2026-10-04T13:50:44+00:00",
+      "updated_at": "2026-10-06T11:25:04+00:00",
       "drive_id": "1GNUG2OXbyhwKi6Dugm5s0CyspvPB34Xt",
       "posts": {
         "tiktok": {
           "post_id": "6ac259ab365aeab50be4a71f",
           "due": "2026-10-05T16:30:00Z"
+        }
+      },
+      "metrics": {
+        "tiktok": {
+          "views": 435,
+          "likes": null,
+          "comments": 0,
+          "shares": 1
         }
       }
     },
@@ -37,7 +45,7 @@
       }
     },
     "3": {
-      "status": "منتج",
+      "status": "مجدول",
       "video_file": "aqar_03_brokerage-commission.mp4",
       "duration_sec": 49.16,
       "voice_rate": -2,
@@ -45,8 +53,26 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T15:41:13+00:00",
-      "updated_at": "2026-10-04T15:41:15+00:00",
-      "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_03_brokerage-commission.mp4"
+      "updated_at": "2026-10-06T11:25:04+00:00",
+      "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_03_brokerage-commission.mp4",
+      "posts": {
+        "tiktok": {
+          "post_id": "6ac4da9010ae9c4df7ff07aa",
+          "due": "2026-10-07T16:30:00+00:00"
+        }
+      }
+    },
+    "4": {
+      "status": "منتج",
+      "video_file": "aqar_04_first-home-tax.mp4",
+      "duration_sec": 51.12,
+      "voice_rate": -2,
+      "presenter": "clip_01.mp4",
+      "warnings": [],
+      "error": null,
+      "produced_at": "2026-10-06T11:25:02+00:00",
+      "updated_at": "2026-10-06T11:25:03+00:00",
+      "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_04_first-home-tax.mp4"
     }
   }
 }
