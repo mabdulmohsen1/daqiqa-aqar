@@ -21,3 +21,6 @@
 {"at": "2026-10-07T11:13:11+00:00", "event": "produced", "id": 5, "file": "aqar_05_non-saudi-ownership-in-force.mp4", "duration": 55.79, "presenter": "clip_01.mp4"}
 {"at": "2026-10-07T11:13:13+00:00", "event": "uploaded", "id": 5, "url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_05_non-saudi-ownership-in-force.mp4"}
 {"at": "2026-10-07T11:13:14+00:00", "event": "scheduled", "id": 4, "channel": "tiktok", "post_id": "6ac629491d37bfff5910e2bc", "due": "2026-10-08T19:30:00+03:00"}
+{"at": "2026-10-08T11:30:59+00:00", "event": "produced", "id": 6, "file": "aqar_06_rett-basics.mp4", "duration": 51.44, "presenter": "clip_01.mp4"}
+{"at": "2026-10-08T11:31:01+00:00", "event": "uploaded", "id": 6, "url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_06_rett-basics.mp4"}
+{"at": "2026-10-08T11:31:02+00:00", "event": "scheduled", "id": 5, "channel": "tiktok", "post_id": "6ac77ef682db5af660c02e28", "due": "2026-10-09T19:30:00+03:00"}

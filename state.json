@@ -9,7 +9,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T13:46:19+00:00",
-      "updated_at": "2026-10-07T11:13:14+00:00",
+      "updated_at": "2026-10-08T11:31:02+00:00",
       "drive_id": "1GNUG2OXbyhwKi6Dugm5s0CyspvPB34Xt",
       "posts": {
         "tiktok": {
@@ -19,7 +19,7 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 469,
+          "views": 474,
           "likes": null,
           "comments": 0,
           "shares": 1
@@ -35,7 +35,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T15:40:34+00:00",
-      "updated_at": "2026-10-07T11:13:14+00:00",
+      "updated_at": "2026-10-08T11:31:02+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_02_lease-auto-renewal.mp4",
       "posts": {
         "tiktok": {
@@ -45,7 +45,7 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 479,
+          "views": 488,
           "likes": null,
           "comments": 0,
           "shares": 1
@@ -53,7 +53,7 @@
       }
     },
     "3": {
-      "status": "مجدول",
+      "status": "منشور",
       "video_file": "aqar_03_brokerage-commission.mp4",
       "duration_sec": 49.16,
       "voice_rate": -2,
@@ -61,12 +61,20 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T15:41:13+00:00",
-      "updated_at": "2026-10-06T11:25:04+00:00",
+      "updated_at": "2026-10-08T11:31:02+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_03_brokerage-commission.mp4",
       "posts": {
         "tiktok": {
           "post_id": "6ac4da9010ae9c4df7ff07aa",
           "due": "2026-10-07T16:30:00+00:00"
+        }
+      },
+      "metrics": {
+        "tiktok": {
+          "views": 412,
+          "likes": null,
+          "comments": 0,
+          "shares": 0
         }
       }
     },
@@ -89,7 +97,7 @@
       }
     },
     "5": {
-      "status": "منتج",
+      "status": "مجدول",
       "video_file": "aqar_05_non-saudi-ownership-in-force.mp4",
       "duration_sec": 55.79,
       "voice_rate": 1,
@@ -97,8 +105,26 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-07T11:13:11+00:00",
-      "updated_at": "2026-10-07T11:13:13+00:00",
-      "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_05_non-saudi-ownership-in-force.mp4"
+      "updated_at": "2026-10-08T11:31:02+00:00",
+      "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_05_non-saudi-ownership-in-force.mp4",
+      "posts": {
+        "tiktok": {
+          "post_id": "6ac77ef682db5af660c02e28",
+          "due": "2026-10-09T16:30:00+00:00"
+        }
+      }
+    },
+    "6": {
+      "status": "منتج",
+      "video_file": "aqar_06_rett-basics.mp4",
+      "duration_sec": 51.44,
+      "voice_rate": -2,
+      "presenter": "clip_01.mp4",
+      "warnings": [],
+      "error": null,
+      "produced_at": "2026-10-08T11:30:59+00:00",
+      "updated_at": "2026-10-08T11:31:01+00:00",
+      "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_06_rett-basics.mp4"
     }
   }
 }
