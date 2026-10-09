@@ -9,7 +9,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T13:46:19+00:00",
-      "updated_at": "2026-10-08T11:31:02+00:00",
+      "updated_at": "2026-10-09T11:26:47+00:00",
       "drive_id": "1GNUG2OXbyhwKi6Dugm5s0CyspvPB34Xt",
       "posts": {
         "tiktok": {
@@ -19,7 +19,7 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 474,
+          "views": 475,
           "likes": null,
           "comments": 0,
           "shares": 1
@@ -35,7 +35,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T15:40:34+00:00",
-      "updated_at": "2026-10-08T11:31:02+00:00",
+      "updated_at": "2026-10-09T11:26:47+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_02_lease-auto-renewal.mp4",
       "posts": {
         "tiktok": {
@@ -45,7 +45,7 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 488,
+          "views": 489,
           "likes": null,
           "comments": 0,
           "shares": 1
@@ -61,7 +61,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T15:41:13+00:00",
-      "updated_at": "2026-10-08T11:31:02+00:00",
+      "updated_at": "2026-10-09T11:26:47+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_03_brokerage-commission.mp4",
       "posts": {
         "tiktok": {
@@ -71,7 +71,7 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 412,
+          "views": 414,
           "likes": null,
           "comments": 0,
           "shares": 0
@@ -79,7 +79,7 @@
       }
     },
     "4": {
-      "status": "مجدول",
+      "status": "منشور",
       "video_file": "aqar_04_first-home-tax.mp4",
       "duration_sec": 51.12,
       "voice_rate": -2,
@@ -87,12 +87,20 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-06T11:25:02+00:00",
-      "updated_at": "2026-10-07T11:13:14+00:00",
+      "updated_at": "2026-10-09T11:26:47+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_04_first-home-tax.mp4",
       "posts": {
         "tiktok": {
           "post_id": "6ac629491d37bfff5910e2bc",
           "due": "2026-10-08T16:30:00+00:00"
+        }
+      },
+      "metrics": {
+        "tiktok": {
+          "views": 158,
+          "likes": null,
+          "comments": 0,
+          "shares": 0
         }
       }
     },
@@ -115,7 +123,7 @@
       }
     },
     "6": {
-      "status": "منتج",
+      "status": "مجدول",
       "video_file": "aqar_06_rett-basics.mp4",
       "duration_sec": 51.44,
       "voice_rate": -2,
@@ -123,8 +131,26 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-08T11:30:59+00:00",
-      "updated_at": "2026-10-08T11:31:01+00:00",
-      "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_06_rett-basics.mp4"
+      "updated_at": "2026-10-09T11:26:47+00:00",
+      "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_06_rett-basics.mp4",
+      "posts": {
+        "tiktok": {
+          "post_id": "6ac8cf77b9c4fe562db8f91a",
+          "due": "2026-10-10T16:30:00+00:00"
+        }
+      }
+    },
+    "7": {
+      "status": "منتج",
+      "video_file": "aqar_07_real-estate-ad-license.mp4",
+      "duration_sec": 56.32,
+      "voice_rate": 6,
+      "presenter": "clip_01.mp4",
+      "warnings": [],
+      "error": null,
+      "produced_at": "2026-10-09T11:26:45+00:00",
+      "updated_at": "2026-10-09T11:26:46+00:00",
+      "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_07_real-estate-ad-license.mp4"
     }
   }
 }
