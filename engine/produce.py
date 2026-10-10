@@ -257,17 +257,18 @@ def tts(text, out_mp3, rate):
     raise RuntimeError(f"TTS_FAILED: {last or 'no word timings'}")
 
 
-def voice_fit(text, stem):
+def voice_fit(text, stem, target=None):
     """Speak at the calm default rate; speed up only as much as needed to stay under the limit."""
     v = CFG["voice"]
+    target = target or CFG["target_duration_sec"]
     rate = int(v["rate"].rstrip("%"))
     out = WORK / f"{stem}.mp3"
     for _ in range(4):
         b = tts(text, out, rate)
         dur = b[-1][1] + 1.2
-        if dur <= CFG["target_duration_sec"] or rate >= v["max_rate_pct"]:
+        if dur <= target or rate >= v["max_rate_pct"]:
             break
-        rate = min(v["max_rate_pct"], rate + max(3, math.ceil((dur / CFG["target_duration_sec"] - 1) * 100) + 1))
+        rate = min(v["max_rate_pct"], rate + max(3, math.ceil((dur / target - 1) * 100) + 1))
     return out, b, dur, rate
 
 
@@ -322,19 +323,100 @@ def synced_presenter(ep_id, audio, dur, stem):
     return path, info
 
 
+# ------------------------------------------------------------------ talking intro / outro clips
+def bookend_audio(ep_id, clip, stem):
+    """Veo clip audio -> Mahmoud's timbre (if enabled), loudness-normalised, exact clip length.
+    -> (wav, seconds) or None when the clip is unusable (caller falls back to TTS for that line)."""
+    try:
+        secs = lipsync.duration(clip)
+        if secs < 2:
+            raise RuntimeError(f"clip too short ({secs:.1f}s)")
+        raw = WORK / f"{stem}_raw.wav"
+        subprocess.run([FFMPEG, "-y", "-loglevel", "error", "-i", str(clip), "-vn", "-ac", "1", "-ar", "44100",
+                        str(raw)], check=True)
+        src = raw
+        if enhance_on("voice_clone") and voice_clone.available():
+            try:
+                src = voice_clone.convert(raw, WORK / f"{stem}_mahmoud_raw.wav")
+            except Exception as ex:
+                warn(ep_id, f"voice_clone {stem}", ex)
+        out = WORK / f"{stem}.wav"
+        subprocess.run([FFMPEG, "-y", "-loglevel", "error", "-i", str(src), "-af", "loudnorm=I=-16:TP=-1.5:LRA=11,apad",
+                        "-t", f"{secs:.2f}", "-ar", "44100", "-ac", "1", str(out)], check=True)
+        return out, secs
+    except Exception as ex:
+        warn(ep_id, f"bookend {clip.name}", ex)
+        return None
+
+
+def bookend_card(ep, kind):
+    """Transparent 1080x1920 layer burned over a full-frame clip: header, hook/outro card, AI label."""
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    t, f = shape(CFG["program"]), font(76, "Black")
+    x = W / 2 - d.textlength(t, font=f) / 2
+    d.text((x + 3, 55), t, font=f, fill=(0, 0, 0, 160))
+    d.text((x, 52), t, font=f, fill=GOLD)
+    top = 1300
+    if kind == "hook":
+        f = font(58, "Black")
+        lines = wrap(d, ep["hook"], f, W - 220)
+        d.rounded_rectangle((90, top, W - 90, top + 70 * len(lines) + 60), 34, fill=GOLD)
+        y = top + 28
+        for ln in lines:
+            text_c(d, ln, f, y, CARD_TEXT); y += 70
+    else:
+        d.rounded_rectangle((90, top, W - 90, top + 210), 34, fill=(10, 30, 44, 200), outline=GOLD, width=4)
+        text_c(d, CFG["program"], font(64, "Black"), top + 30, GOLD)
+        text_c(d, "معلومة عقارية موثّقة كل يوم", font(40, "Bold"), top + 120, WHITE)
+    text_c(d, CFG["ai_label"], font(24, "Regular"), 1840, (210, 220, 230))
+    return img
+
+
+def bookend_segment(clip, card, audio, secs, out):
+    """Clip full-width over a blurred copy of itself filling 9:16, card on top, given audio.
+    The card is a single frame: overlay repeats it (png -loop hangs ffmpeg 7.1)."""
+    png = out.with_suffix(".png")
+    card.save(png)
+    fc = (f"[0:v]fps={FPS},split[c1][c2];[c1]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
+          f"boxblur=40:4,eq=brightness=-0.18[bg];[c2]scale={W}:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2-180[b];"
+          f"[b][1:v]overlay=0:0,format=yuv420p[v]")
+    subprocess.run([FFMPEG, "-y", "-loglevel", "error", "-t", f"{secs:.2f}", "-i", str(clip),
+                    "-i", str(png), "-i", str(audio), "-filter_complex", fc, "-map", "[v]", "-map", "2:a",
+                    "-t", f"{secs:.2f}", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
+                    "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-ac", "2", str(out)], check=True)
+    return out
+
+
+def concat(segs, out):
+    ins = sum((["-i", str(x)] for x in segs), [])
+    fc = "".join(f"[{i}:v][{i}:a]" for i in range(len(segs))) + f"concat=n={len(segs)}:v=1:a=1[v][a]"
+    subprocess.run([FFMPEG, "-y", "-loglevel", "error", *ins, "-filter_complex", fc, "-map", "[v]", "-map", "[a]",
+                    "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-r", str(FPS),
+                    "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-ac", "2", "-movflags", "+faststart", str(out)],
+                   check=True)
+
+
 # ------------------------------------------------------------------ render
 def render(ep, out_path):
     WORK.mkdir(exist_ok=True)
-    parts = [("hook", ep["hook"]), ("body", ep["body"]), ("takeaway", ep["takeaway"]), ("outro", CFG["outro_voice"])]
+    stem = f"aqar{ep['id']:02d}"
+    # talking-presenter clips replace the spoken hook / outro when present and usable
+    hook_clip = ROOT / "assets" / "hooks" / f"ep_{ep['id']:02d}.mp4"
+    outro_clip = ROOT / "assets" / "outro" / "outro.mp4"
+    hook = bookend_audio(ep["id"], hook_clip, f"{stem}_hook") if hook_clip.exists() else None
+    outro = bookend_audio(ep["id"], outro_clip, f"{stem}_outro") if outro_clip.exists() else None
+    extra = (hook[1] if hook else 0) + (outro[1] if outro else 0)
+    parts = ([] if hook else [("hook", ep["hook"])]) + [("body", ep["body"]), ("takeaway", ep["takeaway"])] + (
+        [] if outro else [("outro", CFG["outro_voice"])])
     words, kinds = [], []
     for k, s in parts:
         for w in s.split():
             words.append(w); kinds.append(k)
     text = " ".join(s for _, s in parts)
-    stem = f"aqar{ep['id']:02d}"
-    audio, bounds, dur, rate = voice_fit(text, stem)
-    if dur > CFG["max_duration_sec"]:
-        raise RuntimeError(f"TOO_LONG: {dur:.1f}s > {CFG['max_duration_sec']}s even at {rate:+d}%")
+    audio, bounds, dur, rate = voice_fit(text, stem, CFG["target_duration_sec"] - extra)
+    if dur + extra > CFG["max_duration_sec"]:
+        raise RuntimeError(f"TOO_LONG: {dur + extra:.1f}s > {CFG['max_duration_sec']}s even at {rate:+d}%")
     audio, voice_used = own_voice(ep["id"], audio, dur, stem)
     synced, ls_info = synced_presenter(ep["id"], audio, dur, stem)
 
@@ -361,9 +443,9 @@ def render(ep, out_path):
     pts = ep["on_screen"][:3]
 
     def state_at(t):
-        mode = "hook"
+        mode = kinds[0]
         for k in ("body", "takeaway", "outro"):
-            if t >= first[k] - 0.1:
+            if k in first and t >= first[k] - 0.1:
                 mode = k
         ci = None
         for n, c in enumerate(chunks):
@@ -433,7 +515,7 @@ def render(ep, out_path):
            "-movflags", "+faststart", str(tmp)]
     p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     cache, n = {}, int(dur * FPS)
-    fade_in, fade_out = int(0.35 * FPS), n - int(0.6 * FPS)
+    fade_out = n + 1 if outro else n - int(0.6 * FPS)   # fade only when the narration ends the video
     black = Image.new("RGB", (W, H), (0, 0, 0))
     try:
         for i in range(n):
@@ -455,8 +537,18 @@ def render(ep, out_path):
     if p.wait() != 0:
         raise RuntimeError("FFMPEG_FAILED")
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    tmp.replace(out_path)
-    return {"duration": round(dur, 1), "rate": rate, "presenter": pres_name, "voice": voice_used,
+    if hook or outro:
+        segs = [tmp]
+        if hook:
+            segs.insert(0, bookend_segment(hook_clip, bookend_card(ep, "hook"), *hook, WORK / f"{stem}_hook.mp4"))
+        if outro:
+            segs.append(bookend_segment(outro_clip, bookend_card(ep, "outro"), *outro, WORK / f"{stem}_outro.mp4"))
+        concat(segs, out_path)
+        tmp.unlink()
+    else:
+        tmp.replace(out_path)
+    dur += extra
+    return {"duration": round(dur, 1), "hook_clip": bool(hook), "outro_clip": bool(outro), "rate": rate, "presenter": pres_name, "voice": voice_used,
             "lipsync": ls_info.get("lipsync", "off")}
 
 
