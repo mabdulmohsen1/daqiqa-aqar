@@ -29,6 +29,9 @@ RELEASE = "videos"
 CHANNEL = CFG["buffer"]["channels"]["tiktok"]
 ORG = CFG["buffer"]["organization_id"]
 failures = []
+# state key -> Buffer metric type (TikTok "likes" are Buffer "reactions")
+METRIC_KEYS = {"views": "views", "likes": "reactions", "comments": "comments", "shares": "shares",
+               "reach": "reach", "avg_watch_sec": "averageTimeWatched", "watch_min": "totalTimeWatched"}
 
 
 def fail(step, ep_id, err):
@@ -152,14 +155,14 @@ def step_schedule():
 def step_metrics():
     now = datetime.now(RIYADH)
     by_post = {p["tiktok"]["post_id"]: e for e in state.all_episodes() for p in [e.get("posts") or {}] if "tiktok" in p}
-    for p in channel_posts(["sent", "error"], now - timedelta(days=14), now + timedelta(days=1), metrics=True):
+    for p in channel_posts(["sent", "error"], now - timedelta(days=35), now + timedelta(days=1), metrics=True):
         e = by_post.get(p["id"])
         if not e:
             continue
         if p["status"] == "error":
             fail("publish", e["id"], "Buffer reported a publishing error"); continue
         m = {x["type"]: x["value"] for x in (p.get("metrics") or [])}
-        state.update(e["id"], status="منشور", metrics={"tiktok": {k: m.get(k) for k in ("views", "likes", "comments", "shares")}})
+        state.update(e["id"], status="منشور", metrics={"tiktok": {k: m.get(src) for k, src in METRIC_KEYS.items()}})
 
 
 def main():
