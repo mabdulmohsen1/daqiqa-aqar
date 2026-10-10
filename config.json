@@ -9,9 +9,9 @@
   "voice": {
     "engine": "edge",
     "edge_voice": "ar-SA-HamedNeural",
-    "rate": "-2%",
+    "rate": "+8%",
     "pitch": "-2Hz",
-    "max_rate_pct": 12
+    "max_rate_pct": 15
   },
   "gemini": {
     "api_key_env": "GEMINI_API_KEY",

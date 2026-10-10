@@ -332,10 +332,10 @@ def render(ep, out_path):
             words_line(d, ws, fit(d, " ".join(ws), 66, W - 120), PY0 + PS + 110, cols)
         top = 1300
         if mode == "hook":
-            f = font(50, "ExtraBold")
+            f = font(58, "Black")
             lines = wrap(d, ep["hook"], f, W - 220)
             hgt = 70 * len(lines) + 60
-            d.rounded_rectangle((90, top, W - 90, top + hgt), 34, fill=CARD_BG)
+            d.rounded_rectangle((90, top, W - 90, top + hgt), 34, fill=GOLD)
             y = top + 28
             for ln in lines:
                 text_c(d, ln, f, y, CARD_TEXT); y += 70
@@ -383,9 +383,7 @@ def render(ep, out_path):
             img = cache[st].copy()
             img.paste(pres.frame(t, speaking), (PX0, PY0), mask)
             ImageDraw.Draw(img).rectangle((0, H - 12, int(W * t / dur), H), fill=GOLD)
-            if i < fade_in:
-                img = Image.blend(black, img, i / fade_in)
-            elif i >= fade_out:
+            if i >= fade_out:   # no fade-in: the first frame is the TikTok hook/thumbnail
                 img = Image.blend(img, black, (i - fade_out) / (n - fade_out) * 0.7)
             p.stdin.write(img.tobytes())
     finally:

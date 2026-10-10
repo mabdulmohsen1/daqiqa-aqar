@@ -167,16 +167,10 @@
       }
     },
     "8": {
-      "status": "منتج",
-      "video_file": "aqar_08_off-plan-checks.mp4",
-      "duration_sec": 51.43,
-      "voice_rate": -2,
-      "presenter": "clip_01.mp4",
+      "status": "جاهز",
       "warnings": [],
       "error": null,
-      "produced_at": "2026-10-10T10:44:22+00:00",
-      "updated_at": "2026-10-10T10:44:24+00:00",
-      "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_08_off-plan-checks.mp4"
+      "updated_at": "2026-10-10T10:44:24+00:00"
     }
   }
 }
