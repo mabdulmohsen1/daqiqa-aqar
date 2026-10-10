@@ -27,3 +27,6 @@
 {"at": "2026-10-09T11:26:45+00:00", "event": "produced", "id": 7, "file": "aqar_07_real-estate-ad-license.mp4", "duration": 56.32, "presenter": "clip_01.mp4"}
 {"at": "2026-10-09T11:26:46+00:00", "event": "uploaded", "id": 7, "url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_07_real-estate-ad-license.mp4"}
 {"at": "2026-10-09T11:26:47+00:00", "event": "scheduled", "id": 6, "channel": "tiktok", "post_id": "6ac8cf77b9c4fe562db8f91a", "due": "2026-10-10T19:30:00+03:00"}
+{"at": "2026-10-10T10:44:22+00:00", "event": "produced", "id": 8, "file": "aqar_08_off-plan-checks.mp4", "duration": 51.43, "presenter": "clip_01.mp4"}
+{"at": "2026-10-10T10:44:24+00:00", "event": "uploaded", "id": 8, "url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_08_off-plan-checks.mp4"}
+{"at": "2026-10-10T10:44:25+00:00", "event": "scheduled", "id": 7, "channel": "tiktok", "post_id": "6aca1709c4de2d2b122388b4", "due": "2026-10-11T19:30:00+03:00"}
