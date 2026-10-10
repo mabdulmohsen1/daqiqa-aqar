@@ -1,0 +1,54 @@
+name: enhance-test
+# Renders ONE episode with own voice + lip-sync forced on, publishes it to the public release
+# «tests» for review. Never touches state.json or Buffer. Trigger: Actions tab, or edit
+# tests/enhance-request.txt (episode id) and push.
+on:
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: "episode id"
+        required: true
+        default: "8"
+  push:
+    paths: [tests/enhance-request.txt]
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
+      VOICE_SE_B64: ${{ secrets.VOICE_SE_B64 }}
+      GH_TOKEN: ${{ github.token }}
+      AQAR_VIDEOS_DIR: out
+      AQAR_ENHANCE: "1"
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt -r requirements-enhance.txt
+      - run: pip install --no-deps git+https://github.com/myshell-ai/OpenVoice.git@74a1d147b17a8c3092dd5430504bd83ef6c7eb23
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            work/lipsync
+          key: enhance-${{ github.run_id }}
+          restore-keys: enhance-
+      - name: Render test episode
+        run: |
+          EP="${{ github.event.inputs.episode }}"
+          [ -n "$EP" ] || EP=$(tr -dc 0-9 < tests/enhance-request.txt)
+          python engine/produce.py "$EP" --force | tee result.txt
+          tail -1 result.txt | grep -q '"ok": true'
+          F=$(ls out/*.mp4 | head -1); T="out/test_$(basename "$F")"; mv "$F" "$T"
+          gh release view tests >/dev/null 2>&1 || gh release create tests --title tests --notes "Review renders (not published)"
+          gh release upload tests "$T" --clobber
+          echo "URL: https://github.com/${{ github.repository }}/releases/download/tests/$(basename "$T")" | tee -a "$GITHUB_STEP_SUMMARY"
+          tail -1 result.txt >> "$GITHUB_STEP_SUMMARY"

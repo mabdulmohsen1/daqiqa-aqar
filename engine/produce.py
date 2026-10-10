@@ -6,6 +6,9 @@ usage:
 
 Presenter: if assets/presenter/*.mp4 exist (Gemini Veo clips, see gemini_presenter.py) one is
 looped inside the presenter frame; otherwise the still portrait assets/presenter.jpg is animated.
+Enhancements (config.json "enhance", or AQAR_ENHANCE=1 for a test run), each falling back silently:
+  voice_clone -> narration in Mahmoud's own voice (voice_clone.py, needs VOICE_SE_B64)
+  lipsync     -> presenter's mouth follows the narration (lipsync.py, needs REPLICATE_API_TOKEN)
 Prints one JSON line; exit code 0 = ok, 2 = blocked by compliance, 1 = technical failure.
 """
 import sys as _sys
@@ -23,6 +26,8 @@ import unicodedata
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import compliance  # noqa: E402
 import state       # noqa: E402
+import lipsync     # noqa: E402
+import voice_clone # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PROJECT = ROOT.parent
@@ -214,8 +219,12 @@ class ClipPresenter:
         self.p.kill()
 
 
+def presenter_clips():
+    return sorted((ROOT / "assets" / "presenter").glob("*.mp4"))
+
+
 def presenter():
-    clips = sorted((ROOT / "assets" / "presenter").glob("*.mp4"))
+    clips = presenter_clips()
     if clips:
         c = random.choice(clips)
         return ClipPresenter(c), c.name
@@ -262,6 +271,57 @@ def voice_fit(text, stem):
     return out, b, dur, rate
 
 
+# ------------------------------------------------------------------ enhancements
+def enhance_on(name):
+    """config.json enhance.<name>, or AQAR_ENHANCE=1 to force everything on for a test run."""
+    return os.environ.get("AQAR_ENHANCE") == "1" or CFG.get("enhance", {}).get(name, False)
+
+
+def warn(ep_id, what, err):
+    print(f"WARNING {what}: {err}")
+    state.log("enhance_fallback", id=ep_id, step=what, error=str(err)[:300])
+
+
+def own_voice(ep_id, edge_mp3, dur, stem):
+    """Edge narration -> Mahmoud's timbre, loudness-normalised and padded to the video length."""
+    if not enhance_on("voice_clone"):
+        return edge_mp3, "edge"
+    if not voice_clone.available():
+        warn(ep_id, "voice_clone", "VOICE_SE_B64 missing"); return edge_mp3, "edge"
+    try:
+        raw = WORK / f"{stem}_mahmoud_raw.wav"
+        out = WORK / f"{stem}_mahmoud.wav"
+        voice_clone.convert(edge_mp3, raw)
+        subprocess.run([FFMPEG, "-y", "-loglevel", "error", "-i", str(raw), "-af",
+                        f"loudnorm=I=-16:TP=-1.5:LRA=11,apad", "-t", f"{dur:.2f}", "-ar", "44100", "-ac", "1",
+                        str(out)], check=True)
+        if abs(lipsync.duration(out) - dur) > 0.3:
+            raise RuntimeError(f"voice length {lipsync.duration(out):.2f}s vs {dur:.2f}s")
+        return out, "mahmoud"
+    except Exception as ex:
+        warn(ep_id, "voice_clone", ex); return edge_mp3, "edge"
+
+
+def synced_presenter(ep_id, audio, dur, stem):
+    """Lip-synced face track, or None (caller falls back to the plain clip)."""
+    if not enhance_on("lipsync"):
+        return None, {}
+    clips = presenter_clips()
+    if not lipsync.available() or not clips:
+        warn(ep_id, "lipsync", "REPLICATE_API_TOKEN missing" if clips else "no presenter clips"); return None, {}
+    padded = WORK / f"{stem}_lipsync_audio.wav"
+    subprocess.run([FFMPEG, "-y", "-loglevel", "error", "-i", str(audio), "-af", "apad", "-t", f"{dur:.2f}",
+                    "-ar", "16000", "-ac", "1", str(padded)], check=True)
+    random.Random(ep_id).shuffle(clips)
+    try:
+        path, info = lipsync.sync(clips, padded, dur, stem)
+    except Exception as ex:
+        path, info = None, {"lipsync": "failed", "error": str(ex)[:300]}
+    if path is None:
+        warn(ep_id, "lipsync", info.get("error"))
+    return path, info
+
+
 # ------------------------------------------------------------------ render
 def render(ep, out_path):
     WORK.mkdir(exist_ok=True)
@@ -271,9 +331,12 @@ def render(ep, out_path):
         for w in s.split():
             words.append(w); kinds.append(k)
     text = " ".join(s for _, s in parts)
-    audio, bounds, dur, rate = voice_fit(text, f"aqar{ep['id']:02d}")
+    stem = f"aqar{ep['id']:02d}"
+    audio, bounds, dur, rate = voice_fit(text, stem)
     if dur > CFG["max_duration_sec"]:
         raise RuntimeError(f"TOO_LONG: {dur:.1f}s > {CFG['max_duration_sec']}s even at {rate:+d}%")
+    audio, voice_used = own_voice(ep["id"], audio, dur, stem)
+    synced, ls_info = synced_presenter(ep["id"], audio, dur, stem)
 
     # map voice word boundaries onto our words (punctuation-only tokens get no boundary)
     times, bi = [], 0
@@ -362,7 +425,7 @@ def render(ep, out_path):
             text_c(d, "معلومة عقارية موثّقة كل يوم", font(40, "Bold"), top + 120, WHITE)
         return img
 
-    pres, pres_name = presenter()
+    pres, pres_name = (ClipPresenter(synced), "lipsync:" + synced.name) if synced else presenter()
     tmp = WORK / f"aqar{ep['id']:02d}_tmp.mp4"
     cmd = [FFMPEG, "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS),
            "-i", "-", "-i", str(audio), "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
@@ -393,7 +456,8 @@ def render(ep, out_path):
         raise RuntimeError("FFMPEG_FAILED")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     tmp.replace(out_path)
-    return {"duration": round(dur, 1), "rate": rate, "presenter": pres_name}
+    return {"duration": round(dur, 1), "rate": rate, "presenter": pres_name, "voice": voice_used,
+            "lipsync": ls_info.get("lipsync", "off")}
 
 
 def probe(path):
@@ -428,7 +492,7 @@ def main():
         print(json.dumps({"ok": False, "error": str(ex)[:300]}, ensure_ascii=False)); sys.exit(1)
     warns = [m for l, m in findings if l == "WARN"]
     state.update(ep_id, status="منتج", video_file=out.name, duration_sec=pr["duration"], voice_rate=info["rate"],
-                 presenter=info["presenter"], warnings=warns, error=None,
+                 presenter=info["presenter"], voice=info["voice"], lipsync=info["lipsync"], warnings=warns, error=None,
                  produced_at=datetime.now(timezone.utc).isoformat(timespec="seconds"))
     state.log("produced", id=ep_id, file=out.name, duration=pr["duration"], presenter=info["presenter"])
     print(json.dumps({"ok": True, "file": str(out), **info, "qc": pr, "warnings": warns}, ensure_ascii=False))

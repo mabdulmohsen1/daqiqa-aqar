@@ -84,5 +84,9 @@
     "white": "#FFFFFF",
     "card_bg": "#F6F1E6",
     "card_text": "#0E2A3B"
+  },
+  "enhance": {
+    "voice_clone": false,
+    "lipsync": false
   }
 }

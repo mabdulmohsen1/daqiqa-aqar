@@ -18,6 +18,8 @@ jobs:
     timeout-minutes: 40
     env:
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
+      VOICE_SE_B64: ${{ secrets.VOICE_SE_B64 }}
       GH_TOKEN: ${{ github.token }}
       AQAR_VIDEOS_DIR: out
       PYTHONIOENCODING: utf-8
@@ -27,7 +29,16 @@ jobs:
         with:
           python-version: "3.13"
           cache: pip
-      - run: pip install -r requirements.txt
+      - run: pip install -r requirements.txt -r requirements-enhance.txt
+      - run: pip install --no-deps git+https://github.com/myshell-ai/OpenVoice.git@74a1d147b17a8c3092dd5430504bd83ef6c7eb23
+      - name: Cache voice model and lip-sync results
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            work/lipsync
+          key: enhance-${{ github.run_id }}
+          restore-keys: enhance-
       - name: Ensure public video release exists
         run: gh release view videos >/dev/null 2>&1 || gh release create videos --title "videos" --notes "Rendered episodes (public URLs used by Buffer)"
       - name: Daily pipeline
