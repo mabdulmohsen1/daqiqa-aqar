@@ -30,3 +30,8 @@
 {"at": "2026-10-10T10:44:22+00:00", "event": "produced", "id": 8, "file": "aqar_08_off-plan-checks.mp4", "duration": 51.43, "presenter": "clip_01.mp4"}
 {"at": "2026-10-10T10:44:24+00:00", "event": "uploaded", "id": 8, "url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_08_off-plan-checks.mp4"}
 {"at": "2026-10-10T10:44:25+00:00", "event": "scheduled", "id": 7, "channel": "tiktok", "post_id": "6aca1709c4de2d2b122388b4", "due": "2026-10-11T19:30:00+03:00"}
+{"at": "2026-10-11T10:58:30+00:00", "event": "produced", "id": 31, "file": "aqar_31_ejar-lease-executive-document.mp4", "duration": 54.33, "presenter": "clip_01.mp4"}
+{"at": "2026-10-11T10:59:43+00:00", "event": "produced", "id": 26, "file": "aqar_26_ejar-registration-fee.mp4", "duration": 47.6, "presenter": "clip_01.mp4"}
+{"at": "2026-10-11T10:59:45+00:00", "event": "uploaded", "id": 31, "url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_31_ejar-lease-executive-document.mp4"}
+{"at": "2026-10-11T10:59:46+00:00", "event": "uploaded", "id": 26, "url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_26_ejar-registration-fee.mp4"}
+{"at": "2026-10-11T10:59:47+00:00", "event": "scheduled", "id": 31, "channel": "tiktok", "post_id": "6acb6c23c4de2d2b125a70e5", "due": "2026-10-12T19:30:00+03:00"}
