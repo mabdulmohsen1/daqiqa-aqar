@@ -9,7 +9,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T13:46:19+00:00",
-      "updated_at": "2026-10-11T10:59:47+00:00",
+      "updated_at": "2026-10-12T12:17:14+00:00",
       "drive_id": "1GNUG2OXbyhwKi6Dugm5s0CyspvPB34Xt",
       "posts": {
         "tiktok": {
@@ -19,13 +19,13 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 477,
+          "views": 478,
           "likes": 3,
           "comments": 0,
           "shares": 1,
-          "reach": 453,
-          "avg_watch_sec": 4.89,
-          "watch_min": 41.48
+          "reach": 461,
+          "avg_watch_sec": 4.88,
+          "watch_min": 41.52
         }
       }
     },
@@ -38,7 +38,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T15:40:34+00:00",
-      "updated_at": "2026-10-11T10:59:47+00:00",
+      "updated_at": "2026-10-12T12:17:14+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_02_lease-auto-renewal.mp4",
       "posts": {
         "tiktok": {
@@ -48,13 +48,13 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 490,
+          "views": 492,
           "likes": 3,
           "comments": 0,
           "shares": 1,
-          "reach": 464,
-          "avg_watch_sec": 4.96,
-          "watch_min": 43.1
+          "reach": 465,
+          "avg_watch_sec": 5,
+          "watch_min": 43.72
         }
       }
     },
@@ -67,7 +67,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T15:41:13+00:00",
-      "updated_at": "2026-10-11T10:59:47+00:00",
+      "updated_at": "2026-10-12T12:17:14+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_03_brokerage-commission.mp4",
       "posts": {
         "tiktok": {
@@ -77,13 +77,13 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 414,
+          "views": 416,
           "likes": 2,
           "comments": 0,
           "shares": 0,
           "reach": 414,
-          "avg_watch_sec": 3.33,
-          "watch_min": 26.03
+          "avg_watch_sec": 3.32,
+          "watch_min": 26.1
         }
       }
     },
@@ -96,7 +96,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-06T11:25:02+00:00",
-      "updated_at": "2026-10-11T10:59:47+00:00",
+      "updated_at": "2026-10-12T12:17:14+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_04_first-home-tax.mp4",
       "posts": {
         "tiktok": {
@@ -106,13 +106,13 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 167,
+          "views": 168,
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "reach": 123,
+          "reach": 165,
           "avg_watch_sec": 3.36,
-          "watch_min": 10.25
+          "watch_min": 10.3
         }
       }
     },
@@ -125,7 +125,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-07T11:13:11+00:00",
-      "updated_at": "2026-10-11T10:59:47+00:00",
+      "updated_at": "2026-10-12T12:17:14+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_05_non-saudi-ownership-in-force.mp4",
       "posts": {
         "tiktok": {
@@ -135,13 +135,13 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 185,
+          "views": 186,
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "reach": 0,
+          "reach": 185,
           "avg_watch_sec": 3.11,
-          "watch_min": 11.03
+          "watch_min": 11.13
         }
       }
     },
@@ -154,7 +154,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-08T11:30:59+00:00",
-      "updated_at": "2026-10-11T10:59:47+00:00",
+      "updated_at": "2026-10-12T12:17:14+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_06_rett-basics.mp4",
       "posts": {
         "tiktok": {
@@ -164,18 +164,18 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 279,
-          "likes": 1,
+          "views": 347,
+          "likes": 2,
           "comments": 0,
           "shares": 3,
-          "reach": 0,
-          "avg_watch_sec": 5,
-          "watch_min": 24.67
+          "reach": 159,
+          "avg_watch_sec": 4.99,
+          "watch_min": 31.6
         }
       }
     },
     "7": {
-      "status": "مجدول",
+      "status": "منشور",
       "video_file": "aqar_07_real-estate-ad-license.mp4",
       "duration_sec": 56.32,
       "voice_rate": 6,
@@ -183,20 +183,31 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-09T11:26:45+00:00",
-      "updated_at": "2026-10-10T10:44:25+00:00",
+      "updated_at": "2026-10-12T12:17:14+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_07_real-estate-ad-license.mp4",
       "posts": {
         "tiktok": {
           "post_id": "6aca1709c4de2d2b122388b4",
           "due": "2026-10-11T16:30:00+00:00"
         }
+      },
+      "metrics": {
+        "tiktok": {
+          "views": 100,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "reach": 0,
+          "avg_watch_sec": 1.54,
+          "watch_min": 2.77
+        }
       }
     },
     "8": {
-      "status": "جاهز",
+      "status": "فشل الإنتاج",
       "warnings": [],
-      "error": null,
-      "updated_at": "2026-10-10T10:44:24+00:00"
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=215a1d3ca536464b84ef82f935a90ad9&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:37+00:00"
     },
     "31": {
       "status": "مجدول",
@@ -219,7 +230,7 @@
       }
     },
     "26": {
-      "status": "منتج",
+      "status": "مجدول",
       "video_file": "aqar_26_ejar-registration-fee.mp4",
       "duration_sec": 47.6,
       "voice_rate": 8,
@@ -229,8 +240,204 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-11T10:59:43+00:00",
-      "updated_at": "2026-10-11T10:59:46+00:00",
-      "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_26_ejar-registration-fee.mp4"
+      "updated_at": "2026-10-12T12:17:13+00:00",
+      "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_26_ejar-registration-fee.mp4",
+      "posts": {
+        "tiktok": {
+          "post_id": "6acccfc9fcd88e54a9474f21",
+          "due": "2026-10-13T16:30:00+00:00"
+        }
+      }
+    },
+    "33": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=54ede4df88474dbaa7ae7f23f5e7b193&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:23+00:00"
+    },
+    "32": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=8d798b01f6dd4bf39e1c06e7cc22fb05&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:24+00:00"
+    },
+    "16": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=40108240e8474a7181a9f600ebe6471c&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:25+00:00"
+    },
+    "35": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=4cec608ee1e64037a521b63c84d96bd0&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:27+00:00"
+    },
+    "22": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=5a4a0826ffca48f384f690ae5a44e185&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:28+00:00"
+    },
+    "38": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=be24fcc4e3474c9cbd1a4caf4dee7a1e&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:29+00:00"
+    },
+    "10": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=dc9b4f54abb546008940592e3b603fcc&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:31+00:00"
+    },
+    "34": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=71fb95f9fbff4e289f825bb516aef751&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:32+00:00"
+    },
+    "39": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=eee045fed30949f8927227e5652a473b&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:33+00:00"
+    },
+    "25": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=bf6d625ff27842fcb6e1e1a5e131ddbd&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:34+00:00"
+    },
+    "36": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=899504ecdf874e0c94c8d82bba74a88d&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:36+00:00"
+    },
+    "29": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=3780aadfcba1465597251f39a78780f8&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:39+00:00"
+    },
+    "37": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=b85e808225a84db5aa9fca48de3bb12a&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:40+00:00"
+    },
+    "17": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=cf14e7eacec0475894cd3975558f5814&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:41+00:00"
+    },
+    "42": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=8c8d6e53c4f549d6b878ae90307920f5&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:43+00:00"
+    },
+    "23": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=13415c2379b044f7af08f41253c2f236&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:44+00:00"
+    },
+    "41": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=b5fba84c946e40479dcf1ab020ea23a6&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:45+00:00"
+    },
+    "43": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=022ff4e570754cddbce4d86f32ddfbbd&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:46+00:00"
+    },
+    "40": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=1fac2ecef1b6464889e8bedf684a7db1&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:48+00:00"
+    },
+    "13": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=f32e741d0b97441c8ac555b8185e751b&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:49+00:00"
+    },
+    "9": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=fa6a8f5dd4644ca5a4c8eaa1ece9f838&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:50+00:00"
+    },
+    "27": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=c7805e56233e47adb35cb4dcfd85e1e7&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:52+00:00"
+    },
+    "15": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=ad2b8b8c10744a06b84f9cd2fc9ec987&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:53+00:00"
+    },
+    "46": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=bbab82a30e694d24b3dc8f167600b68a&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:54+00:00"
+    },
+    "24": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=aeed5195bb7a406c876937031cec768e&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:55+00:00"
+    },
+    "47": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=0f9542661283448daadb41e1d840b233&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:57+00:00"
+    },
+    "12": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=bdb16e9dd45b4b719e206e1a9c2f0c86&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:58+00:00"
+    },
+    "44": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=16909af9b7814af795646599cd511d17&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:16:59+00:00"
+    },
+    "21": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=7eab178ab0e54bc391daeec3f32ebc7a&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:17:01+00:00"
+    },
+    "45": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=e6c2962f787942b4a12821d7691b9d56&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:17:02+00:00"
+    },
+    "20": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=d229d5a750ec40a795ce20eff50d618e&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:17:03+00:00"
+    },
+    "14": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=eed1c5ba7e9a4774a47c2bce2148c90a&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:17:05+00:00"
+    },
+    "18": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=3a75a1bf7aef4ca3a5432318339633d0&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:17:06+00:00"
+    },
+    "19": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=c8080831b70342c8a0eb055d1e999f16&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:17:07+00:00"
+    },
+    "11": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=46492e65c0184e86b5c1384e3515f43b&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:17:08+00:00"
+    },
+    "48": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=4ecbf288415945efb61f617704df756b&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:17:10+00:00"
+    },
+    "28": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=94a800f2047d4cf3b16bb0108a833870&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:17:11+00:00"
+    },
+    "30": {
+      "status": "فشل الإنتاج",
+      "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=da0f3d839e8f416e9e877bee5522506d&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6",
+      "updated_at": "2026-10-12T12:17:12+00:00"
     }
   }
 }
