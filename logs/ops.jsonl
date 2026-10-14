@@ -115,3 +115,4 @@
 {"at": "2026-10-12T12:17:12+00:00", "event": "produce_failed", "id": 30, "error": "TTS_FAILED: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=da0f3d839e8f416e9e877bee5522506d&Sec-MS-GEC=FBFFCBF948FFA890C523F8DD81E20C5B9678BD9775CF0F839539BB35C6"}
 {"at": "2026-10-12T12:17:13+00:00", "event": "scheduled", "id": 26, "channel": "tiktok", "post_id": "6acccfc9fcd88e54a9474f21", "due": "2026-10-13T19:30:00+03:00"}
 {"at": "2026-10-13T12:00:40+00:00", "event": "schedule_failed", "id": 0, "error": "no produced episode with a public URL is available"}
+{"at": "2026-10-14T09:38:44+00:00", "event": "schedule_failed", "id": 0, "error": "no produced episode with a public URL is available"}
