@@ -9,7 +9,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T13:46:19+00:00",
-      "updated_at": "2026-10-14T09:38:44+00:00",
+      "updated_at": "2026-10-15T09:16:40+00:00",
       "drive_id": "1GNUG2OXbyhwKi6Dugm5s0CyspvPB34Xt",
       "posts": {
         "tiktok": {
@@ -24,8 +24,8 @@
           "comments": 0,
           "shares": 1,
           "reach": 461,
-          "avg_watch_sec": 4.88,
-          "watch_min": 41.52
+          "avg_watch_sec": 4.6,
+          "watch_min": 39.33
         }
       }
     },
@@ -38,7 +38,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T15:40:34+00:00",
-      "updated_at": "2026-10-14T09:38:44+00:00",
+      "updated_at": "2026-10-15T09:16:40+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_02_lease-auto-renewal.mp4",
       "posts": {
         "tiktok": {
@@ -52,7 +52,7 @@
           "likes": 3,
           "comments": 0,
           "shares": 1,
-          "reach": 468,
+          "reach": 469,
           "avg_watch_sec": 5.05,
           "watch_min": 44.58
         }
@@ -67,7 +67,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T15:41:13+00:00",
-      "updated_at": "2026-10-14T09:38:44+00:00",
+      "updated_at": "2026-10-15T09:16:40+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_03_brokerage-commission.mp4",
       "posts": {
         "tiktok": {
@@ -77,13 +77,13 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 418,
+          "views": 419,
           "likes": 2,
           "comments": 0,
           "shares": 0,
-          "reach": 416,
-          "avg_watch_sec": 3.32,
-          "watch_min": 26.25
+          "reach": 418,
+          "avg_watch_sec": 3.31,
+          "watch_min": 26.27
         }
       }
     },
@@ -96,7 +96,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-06T11:25:02+00:00",
-      "updated_at": "2026-10-14T09:38:44+00:00",
+      "updated_at": "2026-10-15T09:16:40+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_04_first-home-tax.mp4",
       "posts": {
         "tiktok": {
@@ -106,13 +106,13 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 169,
+          "views": 177,
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "reach": 166,
-          "avg_watch_sec": 3.41,
-          "watch_min": 10.5
+          "reach": 167,
+          "avg_watch_sec": 3.39,
+          "watch_min": 10.95
         }
       }
     },
@@ -125,7 +125,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-07T11:13:11+00:00",
-      "updated_at": "2026-10-14T09:38:44+00:00",
+      "updated_at": "2026-10-15T09:16:40+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_05_non-saudi-ownership-in-force.mp4",
       "posts": {
         "tiktok": {
@@ -139,9 +139,9 @@
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "reach": 186,
-          "avg_watch_sec": 3.12,
-          "watch_min": 11.23
+          "reach": 187,
+          "avg_watch_sec": 3.11,
+          "watch_min": 11.25
         }
       }
     },
@@ -154,7 +154,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-08T11:30:59+00:00",
-      "updated_at": "2026-10-14T09:38:44+00:00",
+      "updated_at": "2026-10-15T09:16:40+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_06_rett-basics.mp4",
       "posts": {
         "tiktok": {
@@ -164,13 +164,13 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 375,
+          "views": 395,
           "likes": 3,
           "comments": 0,
           "shares": 3,
-          "reach": 341,
-          "avg_watch_sec": 4.87,
-          "watch_min": 33.23
+          "reach": 345,
+          "avg_watch_sec": 4.72,
+          "watch_min": 33.88
         }
       }
     },
@@ -183,7 +183,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-09T11:26:45+00:00",
-      "updated_at": "2026-10-14T09:38:44+00:00",
+      "updated_at": "2026-10-15T09:16:40+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_07_real-estate-ad-license.mp4",
       "posts": {
         "tiktok": {
@@ -193,13 +193,13 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 123,
+          "views": 124,
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "reach": 90,
-          "avg_watch_sec": 1.75,
-          "watch_min": 3.9
+          "reach": 120,
+          "avg_watch_sec": 1.74,
+          "watch_min": 3.93
         }
       }
     },
@@ -220,7 +220,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-11T10:58:30+00:00",
-      "updated_at": "2026-10-14T09:38:44+00:00",
+      "updated_at": "2026-10-15T09:16:40+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_31_ejar-lease-executive-document.mp4",
       "posts": {
         "tiktok": {
@@ -230,13 +230,13 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 321,
-          "likes": 1,
+          "views": 433,
+          "likes": 2,
           "comments": 0,
           "shares": 1,
-          "reach": 0,
-          "avg_watch_sec": 3.93,
-          "watch_min": 23
+          "reach": 57,
+          "avg_watch_sec": 4.26,
+          "watch_min": 33.05
         }
       }
     },
@@ -251,7 +251,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-11T10:59:43+00:00",
-      "updated_at": "2026-10-14T09:38:44+00:00",
+      "updated_at": "2026-10-15T09:16:40+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_26_ejar-registration-fee.mp4",
       "posts": {
         "tiktok": {
@@ -261,13 +261,13 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 109,
-          "likes": 0,
+          "views": 196,
+          "likes": 1,
           "comments": 0,
           "shares": 0,
           "reach": 0,
-          "avg_watch_sec": 4.37,
-          "watch_min": 7.65
+          "avg_watch_sec": 4.77,
+          "watch_min": 16.3
         }
       }
     },
