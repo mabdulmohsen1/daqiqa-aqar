@@ -9,7 +9,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T13:46:19+00:00",
-      "updated_at": "2026-10-16T09:10:28+00:00",
+      "updated_at": "2026-10-17T08:42:35+00:00",
       "drive_id": "1GNUG2OXbyhwKi6Dugm5s0CyspvPB34Xt",
       "posts": {
         "tiktok": {
@@ -38,7 +38,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T15:40:34+00:00",
-      "updated_at": "2026-10-16T09:10:28+00:00",
+      "updated_at": "2026-10-17T08:42:35+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_02_lease-auto-renewal.mp4",
       "posts": {
         "tiktok": {
@@ -52,8 +52,8 @@
           "likes": 3,
           "comments": 0,
           "shares": 1,
-          "reach": 471,
-          "avg_watch_sec": 4.71,
+          "reach": 472,
+          "avg_watch_sec": 4.7,
           "watch_min": 41.6
         }
       }
@@ -67,7 +67,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-04T15:41:13+00:00",
-      "updated_at": "2026-10-16T09:10:28+00:00",
+      "updated_at": "2026-10-17T08:42:35+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_03_brokerage-commission.mp4",
       "posts": {
         "tiktok": {
@@ -77,13 +77,13 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 419,
+          "views": 420,
           "likes": 2,
           "comments": 0,
           "shares": 0,
-          "reach": 418,
-          "avg_watch_sec": 3.31,
-          "watch_min": 26.27
+          "reach": 419,
+          "avg_watch_sec": 2.9,
+          "watch_min": 23.03
         }
       }
     },
@@ -96,7 +96,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-06T11:25:02+00:00",
-      "updated_at": "2026-10-16T09:10:28+00:00",
+      "updated_at": "2026-10-17T08:42:35+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_04_first-home-tax.mp4",
       "posts": {
         "tiktok": {
@@ -110,7 +110,7 @@
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "reach": 167,
+          "reach": 175,
           "avg_watch_sec": 3.37,
           "watch_min": 10.98
         }
@@ -125,7 +125,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-07T11:13:11+00:00",
-      "updated_at": "2026-10-16T09:10:28+00:00",
+      "updated_at": "2026-10-17T08:42:35+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_05_non-saudi-ownership-in-force.mp4",
       "posts": {
         "tiktok": {
@@ -154,7 +154,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-08T11:30:59+00:00",
-      "updated_at": "2026-10-16T09:10:28+00:00",
+      "updated_at": "2026-10-17T08:42:35+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_06_rett-basics.mp4",
       "posts": {
         "tiktok": {
@@ -164,13 +164,13 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 421,
+          "views": 424,
           "likes": 3,
           "comments": 0,
           "shares": 3,
-          "reach": 370,
-          "avg_watch_sec": 4.89,
-          "watch_min": 37.32
+          "reach": 385,
+          "avg_watch_sec": 4.92,
+          "watch_min": 38.03
         }
       }
     },
@@ -183,7 +183,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-09T11:26:45+00:00",
-      "updated_at": "2026-10-16T09:10:28+00:00",
+      "updated_at": "2026-10-17T08:42:35+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_07_real-estate-ad-license.mp4",
       "posts": {
         "tiktok": {
@@ -197,7 +197,7 @@
           "likes": 0,
           "comments": 0,
           "shares": 0,
-          "reach": 123,
+          "reach": 124,
           "avg_watch_sec": 1.73,
           "watch_min": 3.95
         }
@@ -220,7 +220,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-11T10:58:30+00:00",
-      "updated_at": "2026-10-16T09:10:28+00:00",
+      "updated_at": "2026-10-17T08:42:35+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_31_ejar-lease-executive-document.mp4",
       "posts": {
         "tiktok": {
@@ -230,13 +230,13 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 433,
+          "views": 436,
           "likes": 2,
           "comments": 0,
           "shares": 1,
-          "reach": 318,
-          "avg_watch_sec": 4.25,
-          "watch_min": 33.05
+          "reach": 422,
+          "avg_watch_sec": 4.23,
+          "watch_min": 33.15
         }
       }
     },
@@ -251,7 +251,7 @@
       "warnings": [],
       "error": null,
       "produced_at": "2026-10-11T10:59:43+00:00",
-      "updated_at": "2026-10-16T09:10:28+00:00",
+      "updated_at": "2026-10-17T08:42:35+00:00",
       "video_url": "https://github.com/mabdulmohsen1/daqiqa-aqar/releases/download/videos/aqar_26_ejar-registration-fee.mp4",
       "posts": {
         "tiktok": {
@@ -261,13 +261,13 @@
       },
       "metrics": {
         "tiktok": {
-          "views": 202,
+          "views": 204,
           "likes": 1,
           "comments": 0,
           "shares": 0,
-          "reach": 89,
-          "avg_watch_sec": 4.96,
-          "watch_min": 17.6
+          "reach": 182,
+          "avg_watch_sec": 4.91,
+          "watch_min": 17.65
         }
       }
     },

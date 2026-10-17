@@ -118,3 +118,4 @@
 {"at": "2026-10-14T09:38:44+00:00", "event": "schedule_failed", "id": 0, "error": "no produced episode with a public URL is available"}
 {"at": "2026-10-15T09:16:40+00:00", "event": "schedule_failed", "id": 0, "error": "no produced episode with a public URL is available"}
 {"at": "2026-10-16T09:10:28+00:00", "event": "schedule_failed", "id": 0, "error": "no produced episode with a public URL is available"}
+{"at": "2026-10-17T08:42:35+00:00", "event": "schedule_failed", "id": 0, "error": "no produced episode with a public URL is available"}
