@@ -128,3 +128,5 @@
 {"at": "2026-10-24T08:59:51+00:00", "event": "schedule_failed", "id": 0, "error": "no produced episode with a public URL is available"}
 {"at": "2026-10-25T09:16:52+00:00", "event": "step_schedule_failed", "id": 0, "error": "Actor can not access the specified channels."}
 {"at": "2026-10-25T09:16:52+00:00", "event": "step_metrics_failed", "id": 0, "error": "Actor can not access the specified channels."}
+{"at": "2026-10-26T10:22:10+00:00", "event": "step_schedule_failed", "id": 0, "error": "Actor can not access the specified channels."}
+{"at": "2026-10-26T10:22:10+00:00", "event": "step_metrics_failed", "id": 0, "error": "Actor can not access the specified channels."}
